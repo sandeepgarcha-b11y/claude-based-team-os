@@ -10,6 +10,22 @@ org, not a chat window that resets every session.
 
 ---
 
+## The experiment
+
+Most people use AI as a tool.
+
+This repo explores a different question:
+
+> What if AI had access to the same context, history and operating principles as a small product team?
+
+The goal isn't to automate PM work.
+
+The goal is to give one person access to organisational memory, repeatable workflows and specialist functions that would normally be distributed across multiple roles.
+
+This repository is my prototype of that future.
+
+---
+
 ## Why this matters
 
 Most AI workflows are ephemeral. A good prompt, a useful answer, then reset.
