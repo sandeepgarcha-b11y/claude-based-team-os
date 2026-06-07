@@ -1,0 +1,25 @@
+# feature-index.yaml — THE registry / single source of truth.
+#
+# Every feature maps to its artifacts. `null` is meaningful: it marks a tracked
+# gap that launch-gate keys off. Update this file whenever a feature is created
+# or an artifact is added — memory only compounds if it's written down here.
+
+features:
+  - slug: passwordless-login
+    name: Passwordless Login
+    status: in-progress
+    owner: ic                 # the human operator
+    prd: product/prd-passwordless-login.md
+    decisions:
+      - decisions/2026-05-12-drop-sms-otp.md
+    success_metric: "login completion rate +8pp"
+    dashboard: null           # gap: metric not yet instrumented
+
+  - slug: referral-loop
+    name: Referral Loop v2
+    status: planned
+    owner: ic
+    prd: null                 # gap: no PRD yet — a draft-prd candidate
+    decisions: []
+    success_metric: "k-factor > 0.4"
+    dashboard: null
