@@ -10,7 +10,7 @@ checklist; the human still owns the final call.
 
 ## Inputs
 
-- **Feature slug** (e.g. `passwordless-login`). If omitted, ask which feature.
+- **Feature slug** (e.g. `login-with-a-code`). If omitted, ask which feature.
 
 ## Steps
 

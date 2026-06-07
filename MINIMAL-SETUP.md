@@ -12,11 +12,11 @@ story — **memory → function → growth.**
    Claude reads `feature-index.yaml` and the artifacts, and produces a status
    digest. *Shows: it already knows the org (memory + the chief-of-staff function).*
 
-2. **`launch-gate passwordless-login`**
+2. **`launch-gate login-with-a-code`**
    Claude reviews the feature against the checklist and returns **NO-GO** —
-   because the registry shows `dashboard: null` (metric not instrumented) and the
-   PRD's open questions aren't resolved. *Shows: judgment encoded as a repeatable
-   gate (the eng/QA function), keying off real tracked gaps.*
+   because the registry shows `dashboard: null` (login funnel not yet built) and
+   the email deliverability p95 question is unresolved. *Shows: judgment encoded
+   as a repeatable gate (the eng/QA function), keying off real tracked gaps.*
 
 3. **`draft-prd`** for **`referral-loop`** (the planned feature with `prd: null`)
    Claude writes a PRD and updates the registry row. *Shows: the system grows —
@@ -24,7 +24,7 @@ story — **memory → function → growth.**
 
 A good sanity check before any of that: ask *"What features are in flight and
 where are their PRDs?"* A correctly-guided agent reads `feature-index.yaml` and
-cites `product/prd-passwordless-login.md` — it does **not** invent a doc.
+cites `product/prd-login-with-a-code.md` — it does **not** invent a doc.
 
 ## Make it yours
 

@@ -1,8 +1,5 @@
 # How I see work with Claude going
 
-*An interview narrative. First person, ~2 pages, meant to be spoken from. Bold
-lines are liftable soundbites.*
-
 ---
 
 ## 1. The thesis
@@ -14,14 +11,14 @@ org.** The leverage isn't in better prompts. It's in giving the model a
 engagement. This repo is a small, working example of that system for
 product/growth work.
 
-A concrete example to make this tangible: "Login with a Code" — passwordless
-authentication via a one-time email code. The problem was real and measured: 12%
-of users abandoned the login flow because they couldn't remember their password,
-and average visit frequency was every 5.5 months — long enough to forget. Login
-CVR sat at 66.2%. This repo is how I'd run that feature end-to-end with Claude
-as the system: PRD drafted and registered, the channel-choice decision logged,
-launch-gate running the go/no-go against the tracked gaps. One person, covering
-PM, ops, and QA functions.
+A concrete example: "Login with a Code" — passwordless authentication via a
+one-time email code. The problem was real and measured: 12% of users abandoned
+the login flow because they couldn't remember their password, and average visit
+frequency was every 5.5 months — long enough to forget. Login CVR sat at 66.2%.
+This repo is how I ran that feature end-to-end with Claude as the system: PRD
+drafted and registered, the channel-choice decision logged, launch-gate running
+the go/no-go against the tracked gaps. One person, covering PM, ops, and QA
+functions.
 
 ## 2. The mental-model shift
 
@@ -66,50 +63,49 @@ A tour, by file:
   volume and consistency. I own direction, priorities, and the go/no-go call.
   `launch-gate` can return NO-GO; only I decide to ship anyway.
 
-## 4. Soundbites
+## 4. Principles
 
-- "The harness is swappable. The institutional memory isn't."
-- "Skills are how you hire a function without hiring a person."
-- "The registry is the difference between an assistant that guesses and a
-  teammate that knows."
-- "My job shifted from doing the work to designing the system that does the work —
-  and owning the judgment calls."
-- "Memory compounds; prompts don't."
+- The harness is swappable. The institutional memory isn't.
+- Skills are how you hire a function without hiring a person.
+- The registry is the difference between an assistant that guesses and a
+  teammate that knows.
+- My job shifted from doing the work to designing the system that does the work —
+  and owning the judgment calls.
+- Memory compounds; prompts don't.
 
-## 5. Handling the pushbacks
+## 5. Frequently asked
 
-**"Won't it hallucinate?"**
+**Won't it hallucinate?**
 Yes — unconstrained. So I constrain it. `CLAUDE.md` makes two rules
 non-negotiable: never reference a doc that isn't in the registry, and always cite
 the path you used. The registry bounds the world to real artifacts, and
-`launch-gate` is an explicit human-reviewed checkpoint. **Hallucination is a
-systems problem, and I built the system to bound it.**
+`launch-gate` is an explicit human-reviewed checkpoint. Hallucination is a
+systems problem, and I built the system to bound it.
 
-**"Isn't this just prompts in folders?"**
-Prompts are stateless and per-person. This is persistent, shared, *versioned*
+**Isn't this just prompts in folders?**
+Prompts are stateless and per-person. This is persistent, shared, versioned
 institutional memory with defined interfaces between functions. The prompt is the
 least important part — swap the model or the harness and the memory survives.
-**The asset is the org, not the prompt.**
+The asset is the org, not the prompt.
 
-**"What's left for the human?"**
+**What's left for the human?**
 The things that don't delegate: taste, prioritization, relationships, and
-accountability. The OS removes the toil, not the judgment. **This is leverage,
-not replacement** — it raises the ceiling on what one person is responsible for,
+accountability. The OS removes the toil, not the judgment. This is leverage,
+not replacement — it raises the ceiling on what one person is responsible for,
 it doesn't remove the person.
 
-## 6. The 90-second live demo (closer)
+## 6. Seeing it in action
 
-I'd rather show it than describe it. Three commands, in order:
+Three commands that tell the whole story:
 
 1. **`weekly-synthesis`** → a status digest built from the registry and
    artifacts. *It already knows the org.*
 2. **`launch-gate login-with-a-code`** → **NO-GO**, with the specific gaps
-   pulled from the tracked `null`s in the registry: the login funnel dashboard
-   doesn't exist yet, and the email deliverability p95 question is unresolved.
-   *Judgment, encoded and repeatable — I didn't have to hold that checklist in my
-   head.*
+   pulled from the tracked `null`s: the login funnel dashboard doesn't exist yet,
+   and the email deliverability p95 question is unresolved. *Judgment, encoded
+   and repeatable.*
 3. **`draft-prd referral-loop`** → a new PRD plus a registry update. *The system
    grows.*
 
-Memory → function → growth, in under two minutes. **That's how I see work with
-Claude going: not a smarter chatbot, but a one-person team that compounds.**
+Memory → function → growth. Not a smarter chatbot — a one-person team that
+compounds.

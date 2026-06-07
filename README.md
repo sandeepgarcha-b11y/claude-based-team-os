@@ -15,21 +15,23 @@ already knows the org.
 One individual contributor, paired with Claude run as a *system* rather than a
 chat window, can ship at the velocity of a whole team. The repo holds the
 memory and the functions; the human holds the taste, priorities, and the
-go/no-go call. See **[NARRATIVE.md](NARRATIVE.md)** for the full story.
+go/no-go call. See **[WORKING-PHILOSOPHY.md](WORKING-PHILOSOPHY.md)** for the
+full story.
 
 ## Quickstart
 
 1. Open this repo in Claude Code (or any agentic harness — the content is plain
    Markdown/YAML).
-2. Read **[MINIMAL-SETUP.md](MINIMAL-SETUP.md)** to run the 90-second demo flow.
-3. Read **[NARRATIVE.md](NARRATIVE.md)** for the interview script and soundbites.
+2. Read **[MINIMAL-SETUP.md](MINIMAL-SETUP.md)** to run the demo flow.
+3. Read **[WORKING-PHILOSOPHY.md](WORKING-PHILOSOPHY.md)** for the working
+   philosophy and design rationale.
 
 ## Layout
 
 ```
 claude-based-team-os/
 ├── CLAUDE.md                # operating config the agent loads every session
-├── NARRATIVE.md             # the interview centerpiece
+├── WORKING-PHILOSOPHY.md    # working philosophy and design rationale
 ├── MINIMAL-SETUP.md         # make-it-yours guide + demo flow
 ├── .claude/
 │   ├── settings.json        # registers the session-start hook
