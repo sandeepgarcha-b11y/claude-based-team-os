@@ -14,6 +14,15 @@ org.** The leverage isn't in better prompts. It's in giving the model a
 engagement. This repo is a small, working example of that system for
 product/growth work.
 
+A concrete example to make this tangible: "Login with a Code" — passwordless
+authentication via a one-time email code. The problem was real and measured: 12%
+of users abandoned the login flow because they couldn't remember their password,
+and average visit frequency was every 5.5 months — long enough to forget. Login
+CVR sat at 66.2%. This repo is how I'd run that feature end-to-end with Claude
+as the system: PRD drafted and registered, the channel-choice decision logged,
+launch-gate running the go/no-go against the tracked gaps. One person, covering
+PM, ops, and QA functions.
+
 ## 2. The mental-model shift
 
 Most people use Claude like a vending machine: type a question, get an answer,
@@ -37,9 +46,11 @@ level — from doing the work to operating the system that does the work.
 A tour, by file:
 
 - **Memory compounds → `decisions/` + `product/`.** Every decision and artifact
-  is captured once and reusable forever. When I ask "why did we drop SMS OTP?",
-  Claude cites `decisions/2026-05-12-drop-sms-otp.md` instead of re-deriving it.
-  **The org gets smarter; the prompt doesn't get longer.**
+  is captured once and reusable forever. The "Login with a Code" feature has a
+  real decision logged for why we shipped email-first and deferred SMS — so when
+  someone asks six months later, Claude cites `decisions/2026-05-12-email-first-auth.md`
+  with the full reasoning, not a re-derivation. **The org gets smarter; the
+  prompt doesn't get longer.**
 
 - **Skills = repeatable team functions → `.claude/skills/`.** `draft-prd` is the
   PM. `weekly-synthesis` is the chief of staff who reads everything. `launch-gate`
@@ -92,9 +103,11 @@ I'd rather show it than describe it. Three commands, in order:
 
 1. **`weekly-synthesis`** → a status digest built from the registry and
    artifacts. *It already knows the org.*
-2. **`launch-gate passwordless-login`** → **NO-GO**, with the specific gaps
-   (metric not instrumented, open questions unresolved) pulled from the tracked
-   `null`s. *Judgment, encoded and repeatable.*
+2. **`launch-gate login-with-a-code`** → **NO-GO**, with the specific gaps
+   pulled from the tracked `null`s in the registry: the login funnel dashboard
+   doesn't exist yet, and the email deliverability p95 question is unresolved.
+   *Judgment, encoded and repeatable — I didn't have to hold that checklist in my
+   head.*
 3. **`draft-prd referral-loop`** → a new PRD plus a registry update. *The system
    grows.*
 

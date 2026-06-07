@@ -5,15 +5,15 @@
 # or an artifact is added — memory only compounds if it's written down here.
 
 features:
-  - slug: passwordless-login
-    name: Passwordless Login
+  - slug: login-with-a-code
+    name: Login with a Code
     status: in-progress
     owner: ic                 # the human operator
-    prd: product/prd-passwordless-login.md
+    prd: product/prd-login-with-a-code.md
     decisions:
-      - decisions/2026-05-12-drop-sms-otp.md
-    success_metric: "login completion rate +8pp"
-    dashboard: null           # gap: metric not yet instrumented
+      - decisions/2026-05-12-email-first-auth.md
+    success_metric: "login CVR improvement from 66.2% baseline; password reset volume reduction"
+    dashboard: null           # gap: login funnel dashboard not yet built — go/no-go dependency
 
   - slug: referral-loop
     name: Referral Loop v2
